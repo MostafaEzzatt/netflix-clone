@@ -1,0 +1,25 @@
+@use "../variables/colors" as color;
+@use "../functions/inc" as *;
+
+.header__hero {
+  width: 100%;
+  height: auto;
+  flex: 1 1 auto;
+  flex-direction: column;
+  z-index: 2000;
+
+  &__title,
+  &__subtitle {
+    max-width: rem(800);
+  }
+  &__title {
+    line-height: rem(70.4);
+    font-weight: bold;
+  }
+
+  &__subtitle {
+    margin: rem(16) 0;
+    font-size: rem(26);
+    font-weight: 400;
+  }
+}

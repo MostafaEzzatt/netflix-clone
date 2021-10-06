@@ -1,0 +1,13 @@
+@use "./typography/inc" as *;
+@use "./global/inc" as *;
+@use "./functions/inc";
+
+/* Components */
+@use "./components/header";
+@use "./components/languageInput";
+@use "./components/nav";
+@use "./components/mail";
+@use "./components/hero";
+@use "./components/section";
+@use "./components/questions";
+@use "./components/footer";

@@ -1,0 +1,24 @@
+@use "../variables/colors" as color;
+@use "../functions/inc" as *;
+
+.header {
+  width: 100%;
+  min-height: rem(750);
+  max-height: 80vh;
+  background: linear-gradient(to top, color.$black, transparent),
+    url("../images/heroBG.jpg");
+  background-position: center;
+  flex-direction: column;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, color.$black, transparent);
+    z-index: 1000;
+  }
+}

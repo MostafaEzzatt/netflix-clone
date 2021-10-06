@@ -1,0 +1,39 @@
+@use "../variables/colors" as color;
+@use "../functions/inc" as *;
+
+.cta {
+  &__select {
+    margin-right: rem(32);
+    border: 1px solid color.$gray;
+    position: relative;
+    display: inline-block;
+    border-radius: rem(2);
+    &__lang {
+      padding: rem(8) rem(22);
+      font-size: rem(14);
+      color: color.$white;
+      background-color: transparent;
+
+      option {
+        background-color: color.$gray;
+      }
+    }
+    .earth,
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+      svg {
+        max-width: rem(15);
+        vertical-align: middle;
+      }
+    }
+    .earth {
+      left: rem(4.8);
+    }
+    .arrow {
+      right: rem(6.8);
+    }
+  }
+}

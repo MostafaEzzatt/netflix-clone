@@ -1,0 +1,51 @@
+@use "../functions/inc" as *;
+@use "../variables/colors" as color;
+.question {
+  flex-direction: column;
+  &__title {
+    font-size: rem(50);
+  }
+
+  &__list {
+    width: 75%;
+    max-width: rem(815);
+    margin-top: em(32);
+    margin-bottom: em(32);
+    list-style: none;
+
+    &__item {
+      margin-bottom: rem(8);
+      &__title,
+      &__content {
+        width: 100%;
+        font-size: rem(24);
+
+        background-color: color.$mine-shaft;
+      }
+      &__title {
+        border: none;
+        cursor: pointer;
+        margin-bottom: rem(1);
+        padding: rem(20) rem(30);
+      }
+
+      &__content {
+        padding: rem(30) rem(30);
+        overflow: hidden;
+
+        p:not(:last-child) {
+          margin-bottom: rem(30);
+        }
+
+        &.open {
+          padding: rem(30) rem(30);
+          max-height: rem(9999);
+        }
+        &.close {
+          padding: 0;
+          max-height: 0;
+        }
+      }
+    }
+  }
+}

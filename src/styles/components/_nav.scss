@@ -1,0 +1,14 @@
+@use "../variables/colors" as color;
+@use "../functions/inc" as *;
+
+.header {
+  &__nav {
+    padding-top: rem(28);
+    margin: 0 rem(56);
+    z-index: 2000;
+    &__logo {
+      height: rem(45);
+      fill: color.$primary;
+    }
+  }
+}

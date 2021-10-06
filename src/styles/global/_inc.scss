@@ -1,0 +1,87 @@
+@use "../variables/colors" as color;
+@use "../functions/inc" as *;
+
+html {
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: color.$white;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: color.$black;
+}
+
+select {
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.btn {
+  padding: rem(7) rem(17);
+  text-decoration: none;
+  border-radius: rem(3);
+  color: color.$white;
+}
+
+.section-border {
+  border-bottom: rem(8) solid color.$mine-shaft;
+}
+
+.bg-primary {
+  background-color: color.$primary;
+  color: color.$white;
+}
+
+.container {
+  width: 100%;
+  padding-top: rem(70);
+  padding-bottom: rem(70);
+}
+
+.flex {
+  display: flex;
+}
+
+.f-reversed {
+  flex-direction: row-reverse;
+}
+
+.f-jc-b {
+  justify-content: space-between;
+}
+
+.f-ai-c {
+  align-items: center;
+}
+
+.f-jc-c {
+  justify-content: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: rem(64);
+}

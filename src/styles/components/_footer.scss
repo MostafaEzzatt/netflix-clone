@@ -1,0 +1,65 @@
+@use "../variables/colors" as color;
+@use "../functions/inc" as *;
+.footer {
+  max-width: rem(1000);
+  margin: auto;
+  flex-direction: column;
+
+  &__top__link,
+  > span {
+    font-size: rem(16);
+    color: color.$bright-mine-shaft;
+    text-decoration: none;
+    margin-bottom: rem(30);
+  }
+
+  > span {
+    font-size: rem(13);
+    margin-top: rem(24);
+    margin-bottom: rem(13);
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    row-gap: rem(16);
+
+    &__item {
+      &__a {
+        font-size: rem(13);
+        color: color.$bright-mine-shaft;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .cta__select {
+    align-self: flex-start;
+    margin-top: rem(36);
+
+    &__lang {
+      padding: rem(15.5) rem(26) rem(15.5) rem(50);
+      font-size: rem(16);
+      color: color.$bright-mine-shaft;
+      option {
+        color: color.$bright-mine-shaft;
+        background-color: color.$black;
+      }
+    }
+
+    .earth {
+      left: rem(15);
+      svg {
+        fill: color.$bright-mine-shaft;
+        height: rem(20);
+        max-width: rem(32);
+      }
+    }
+    .arrow {
+      svg {
+        fill: color.$bright-mine-shaft;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use "../variables/colors" as color;
+@use "../functions/inc" as *;
+
+.email {
+  &__title {
+    font-size: rem(19.2);
+    font-weight: 400;
+    margin-top: rem(16);
+    margin-bottom: rem(16);
+  }
+  &__input {
+    [type="email"] {
+      min-width: rem(500);
+      height: rem(70);
+      font-size: rem(16);
+      color: color.$black;
+      padding-left: rem(10);
+      padding-right: rem(10);
+      border-width: 0;
+      outline: 0;
+      border-top-left-radius: rem(2);
+      border-bottom-left-radius: rem(2);
+    }
+
+    button {
+      height: rem(70);
+      font-size: rem(23);
+      padding-left: rem(23);
+      padding-right: rem(23);
+      border-width: 0;
+      background-color: color.$primary;
+      border-top-right-radius: rem(2);
+      border-bottom-right-radius: rem(2);
+      cursor: pointer;
+
+      span,
+      span {
+        svg {
+          width: rem(8.25);
+          height: rem(17.68);
+          fill: color.$white;
+        }
+      }
+      span {
+        margin-left: rem(12);
+      }
+    }
+  }
+}
