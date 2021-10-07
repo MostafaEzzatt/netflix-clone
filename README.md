@@ -2,7 +2,8 @@
 
 Create Netflix Clone Just For Practicing _[ Only Index Page ]_
 
-![Screen-shot](https://user-images.githubusercontent.com/16215816/136445147-94b4b2b4-a15c-420f-bf50-044dad088c15.png)
+![Screen-shot](https://user-images.githubusercontent.com/16215816/136445353-225eac76-8a31-4d0a-a67f-35c7de7953f8.png)
+
 
 ## What i Used
 
