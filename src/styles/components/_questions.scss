@@ -80,7 +80,9 @@
     }
     &__input {
       [type="email"] {
-        width: 95%;
+        @include breakpoint-down("xsmall") {
+          min-width: 95%;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@ import Hero from "./Hero";
 
 const Header = () => {
   return (
-    <header className="header flex section-border">
+    <header className="header flex f-ai-c section-border">
       <Nav />
       <Hero />
     </header>
