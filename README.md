@@ -2,6 +2,8 @@
 
 Create Netflix Clone Just For Practicing _[ Only Index Page ]_
 
+![Screen-shot](https://user-images.githubusercontent.com/16215816/136445147-94b4b2b4-a15c-420f-bf50-044dad088c15.png)
+
 ## What i Used
 
 React, webpack, sass/scss
