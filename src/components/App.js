@@ -1,6 +1,6 @@
 import "../styles/index.scss";
 import Header from "./Header";
-import Sections from "./sections";
+import Sections from "./Sections";
 import Question from "./Question";
 import Footer from "./Footer";
 
