@@ -1,5 +1,6 @@
 @use "../variables/colors" as color;
 @use "../functions/inc" as *;
+@use "../mixins/breakpoints" as *;
 
 html {
   font-size: 100%;
@@ -54,8 +55,10 @@ video {
 
 .container {
   width: 100%;
-  padding-top: rem(70);
-  padding-bottom: rem(70);
+  padding: rem(70) rem(45);
+  @include breakpoint-down("small") {
+    padding: rem(35) rem(22);
+  }
 }
 
 .flex {

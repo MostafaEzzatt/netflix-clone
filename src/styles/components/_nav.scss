@@ -1,5 +1,6 @@
 @use "../variables/colors" as color;
 @use "../functions/inc" as *;
+@use "../mixins/breakpoints" as *;
 
 .header {
   &__nav {
@@ -9,6 +10,10 @@
     &__logo {
       height: rem(45);
       fill: color.$primary;
+
+      @include breakpoint-down("medium") {
+        height: rem(32);
+      }
     }
   }
 }

@@ -1,25 +1,57 @@
 @use "../variables/colors" as color;
 @use "../functions/inc" as *;
+@use "../mixins/breakpoints" as *;
 
 .section {
   max-width: rem(1100);
   gap: rem(48);
+  @include breakpoint-down("medium") {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
   &__info {
-    width: 52%;
+    width: 60%;
+    @include breakpoint-down("max-medium") {
+      width: 92%;
+    }
+
+    @include breakpoint-down("medium") {
+      width: 100%;
+    }
+
     &__title {
       font-size: rem(45.2);
       line-height: 1.1;
       margin-bottom: rem(8);
+
+      @include breakpoint-down("small") {
+        font-size: rem(43.6);
+      }
     }
     &__subtitle {
       font-size: rem(23);
       font-weight: 400;
       margin-top: rem(19.5);
       margin-bottom: rem(6.5);
+      @include breakpoint-down("medium") {
+        font-size: rem(20);
+      }
+      @include breakpoint-down("small") {
+        padding-right: rem(20);
+        padding-left: rem(20);
+      }
     }
   }
   &__animation {
     position: relative;
+
+    @include breakpoint-down("medium") {
+      margin-top: rem(20, true);
+      z-index: -1;
+    }
+
     &__image {
     }
     &__video,
@@ -66,7 +98,7 @@
 
       &__info {
         &__title {
-          font-size: rem(16);
+          font-size: rem(14.4);
         }
         &__sub {
           font-size: rem(14.4);

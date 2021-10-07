@@ -1,5 +1,7 @@
 @use "../functions/inc" as *;
 @use "../variables/colors" as color;
+@use "../mixins/breakpoints" as *;
+
 .question {
   flex-direction: column;
   &__title {
@@ -13,12 +15,23 @@
     margin-bottom: em(32);
     list-style: none;
 
+    @include breakpoint-down("medium") {
+      width: 90%;
+    }
+
+    @include breakpoint-down("xsmall") {
+      width: 100%;
+    }
+
     &__item {
       margin-bottom: rem(8);
       &__title,
       &__content {
         width: 100%;
         font-size: rem(24);
+        @include breakpoint-down("xsmall") {
+          font-size: rem(18);
+        }
 
         background-color: color.$mine-shaft;
       }
@@ -45,6 +58,29 @@
           padding: 0;
           max-height: 0;
         }
+      }
+    }
+  }
+
+  .email {
+    &__title {
+      @include breakpoint-down("medium") {
+        padding-left: rem(31.2);
+        padding-right: rem(31.2);
+      }
+      @include breakpoint-down("small") {
+        padding-left: rem(85);
+        padding-right: rem(85);
+      }
+
+      @include breakpoint-down("xsmall") {
+        padding-left: rem(59);
+        padding-right: rem(59);
+      }
+    }
+    &__input {
+      [type="email"] {
+        width: 95%;
       }
     }
   }

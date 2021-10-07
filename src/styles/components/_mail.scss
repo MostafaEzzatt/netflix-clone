@@ -1,5 +1,6 @@
 @use "../variables/colors" as color;
 @use "../functions/inc" as *;
+@use "../mixins/breakpoints" as *;
 
 .email {
   &__title {
@@ -7,8 +8,23 @@
     font-weight: 400;
     margin-top: rem(16);
     margin-bottom: rem(16);
+    @include breakpoint-down("medium") {
+      font-size: rem(23);
+      padding-right: rem(240);
+      padding-left: rem(240);
+    }
+    @include breakpoint-down("small") {
+      font-size: rem(18);
+      padding-right: rem(85);
+      padding-left: rem(85);
+    }
   }
   &__input {
+    @include breakpoint-down("medium") {
+      flex-direction: column;
+      align-items: center;
+    }
+
     [type="email"] {
       min-width: rem(500);
       height: rem(70);
@@ -20,6 +36,18 @@
       outline: 0;
       border-top-left-radius: rem(2);
       border-bottom-left-radius: rem(2);
+      @include breakpoint-down("medium") {
+        height: rem(60);
+        border-radius: rem(2);
+        margin-bottom: rem(14);
+      }
+      @include breakpoint-down("small") {
+        min-width: 80%;
+        height: rem(48);
+      }
+      @include breakpoint-down("xsmall") {
+        min-width: 90%;
+      }
     }
 
     button {
@@ -32,6 +60,21 @@
       border-top-right-radius: rem(2);
       border-bottom-right-radius: rem(2);
       cursor: pointer;
+
+      @include breakpoint-down("medium") {
+        height: rem(48);
+        border-radius: rem(2);
+        padding-left: rem(16);
+        padding-right: rem(16);
+        font-size: rem(16);
+      }
+      @include breakpoint-down("small") {
+        height: rem(48);
+      }
+
+      &:hover {
+        background-color: color.$primary-bright;
+      }
 
       span,
       span {

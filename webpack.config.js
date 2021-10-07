@@ -1,10 +1,15 @@
 let mode = process.env.NODE_ENV == "development" ? "development" : "production";
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   mode: mode,
   cache: { type: "filesystem" },
-  output: { assetModuleFilename: "images/[hash][ext][query]" },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "images/[hash][ext][query]",
+  },
   module: {
     rules: [
       { test: /\.(png|jpe?g|gif|m4v)$/i, type: "asset" },
@@ -47,12 +52,13 @@ module.exports = {
     hints: false,
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
   ],
-  // devtool: "source-map",
+  devtool: "source-map",
   devServer: {
     static: "./dist",
     hot: true,

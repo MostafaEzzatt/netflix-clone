@@ -1,5 +1,6 @@
 @use "../variables/colors" as color;
 @use "../functions/inc" as *;
+@use "../mixins/breakpoints" as *;
 
 .header__hero {
   width: 100%;
@@ -15,11 +16,28 @@
   &__title {
     line-height: rem(70.4);
     font-weight: bold;
+    @include breakpoint-down("medium") {
+      font-size: rem(50);
+      margin-right: rem(130);
+      margin-left: rem(130);
+    }
+    @include breakpoint-down("small") {
+      margin-right: rem(40);
+      margin-left: rem(40);
+    }
+    @include breakpoint-down("xsmall") {
+      font-size: rem(28);
+      line-height: 1.1;
+    }
   }
 
   &__subtitle {
     margin: rem(16) 0;
     font-size: rem(26);
     font-weight: 400;
+    @include breakpoint-down("xsmall") {
+      font-size: rem(18);
+      margin-bottom: 0;
+    }
   }
 }

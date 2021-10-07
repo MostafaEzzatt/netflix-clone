@@ -1,5 +1,6 @@
 @use "../variables/colors" as color;
 @use "../functions/inc" as *;
+@use "../mixins/breakpoints" as *;
 
 .header {
   width: 100%;
@@ -11,6 +12,12 @@
   flex-direction: column;
   position: relative;
 
+  @include breakpoint-down("small") {
+    min-height: rem(700);
+  }
+  @include breakpoint-down("xsmall") {
+    min-height: rem(517);
+  }
   &::after {
     content: "";
     position: absolute;
