@@ -17,6 +17,7 @@ If you run into any issues, don't be afraid to open a issue! Either I or someone
 ---
 
 ## Demo
+[Netflix Clone App Link](https://main-netflix-clone-2021.netlify.app/)
 
 #### Tools & Versions
 
